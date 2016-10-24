@@ -43,8 +43,16 @@ attr_accessor :first_name, :last_name, :email, :note
   # 1. which of the contact's attributes you want to update
   # 2. the new value for that attribute
   # and then make the appropriate change to the contact
-  def update
-
+  def update(attribute, new_attribute)
+    if attribute == new_attribute
+      new_value == "first_name"
+    end
+    if new_value == "last_name"
+    end
+    if new_value == "email"
+    end
+    if new_value == "note"
+    end
   end
 
   # This method should work similarly to the find method above
@@ -57,7 +65,7 @@ attr_accessor :first_name, :last_name, :email, :note
 
   # This method should delete all of the contacts
   def self.delete_all
-
+    [] << @@contacts
   end
 
   def full_name
