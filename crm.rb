@@ -86,7 +86,7 @@ class CRM
   end
 
   def display_all_contacts
-    @@contacts
+    Contact.all
     # HINT: Make use of the display_contacts method to keep your code DRY
   end
 
