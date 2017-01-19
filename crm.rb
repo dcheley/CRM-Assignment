@@ -1,6 +1,6 @@
-class CRM
+require_relative 'contact'
 
-  require_relative 'contact'
+class CRM
 
   def initialize
   end
@@ -86,7 +86,7 @@ class CRM
   end
 
   def display_all_contacts
-    Contact.all
+    contacts = Contact.all
     # HINT: Make use of the display_contacts method to keep your code DRY
   end
 
@@ -103,7 +103,4 @@ class CRM
       print_main_menu
     # HINT: Make use of the display_contacts method to keep your code DRY
   end
-
-  # Add other methods here, if you need them.
-
 end

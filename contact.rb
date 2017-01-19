@@ -63,14 +63,15 @@ attr_accessor :first_name, :last_name, :email, :note
   # eg. searching for 'first_name', 'Betty' should return the first contact named Betty
   def self.find_by(show)
    @@contacts.each do |contact|
-    if contact.first_name == show
-      return contact
-    elsif contact.last_name == show
-      return contact
-    elsif contact.email == show
-      return contact
-    else
-      puts "Contact doesn't exist"
+      if contact.first_name == show
+        return contact
+      elsif contact.last_name == show
+        return contact
+      elsif contact.email == show
+        return contact
+      else
+        puts "Contact doesn't exist"
+      end
     end
   end
   # This method should delete all of the contacts
@@ -87,5 +88,4 @@ attr_accessor :first_name, :last_name, :email, :note
   def delete
     @@contacts.delete(self)
   end
-
 end
